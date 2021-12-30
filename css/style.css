@@ -1,0 +1,175 @@
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #050505;
+}
+
+.pagecontent {
+  text-align: center;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+#upbtn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+  right: 2%;
+  top: 50%;
+  margin-top: -10px;
+  transform: rotate(45deg);
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+#upbtn:hover {
+  border-radius: 0 50% 50% 50%;
+}
+
+#upbtn p {
+  text-align: center;
+  font-size: 1.5rem;
+  transform: rotate(-45deg);
+  line-height: 100%;
+  margin: 0;
+}
+
+header {
+  height: 900px;
+}
+
+header h1 {
+  color: #e76f51;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: #e76f51;
+  margin-top: 6px;
+}
+
+.category {
+  color: #e76f51;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.link {
+  display: inline-flex;
+  text-decoration: none;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.link:hover {
+  background-color: rgba(231, 111, 81, 0.3);
+}
+
+.categoryrow#one {
+  margin-top: 120px;
+}
+
+.categoryrow#two {
+  margin-top: 208px;
+}
+
+.categoryrow p {
+  display: inline;
+}
+
+.category#two {
+  margin-right: 260px;
+}
+
+.category#three {
+  margin-left: 260px;
+}
+
+.category#four {
+  margin-right: 800px;
+}
+
+.circle {
+  width: 800px;
+  height: 800px;
+  border-radius: 400px;
+  border-color: #e76f5156;
+  border-style: solid;
+  position: absolute;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -792px;
+  z-index: -1;
+}
+
+.person {
+  height: 650px;
+  /*Width: 624.453*/
+  position: absolute;
+  left: 50%;
+  margin-left: -312px;
+  margin-top: -340px;
+  z-index: -1;
+}
+
+.contentbox {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#about-me {
+  background-color: #f4a261;
+  color: #264653;
+}
+
+#about-me p {
+  font-size: 1.3rem;
+  margin-left: 5%;
+  width: 40%;
+}
+
+#about-me img {
+  float: right;
+  background-color: red;
+  height: 70vh;
+  width: 400px;
+  margin-right: 5%;
+}
+
+#skills {
+  background-color: #e9c46a;
+}
+
+#projects {
+  background-color: #2a9d8f;
+}
+
+#contact {
+  background-color: #264653;
+}
