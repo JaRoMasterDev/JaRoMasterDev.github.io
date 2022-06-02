@@ -1,20 +1,41 @@
-const prevP = () => {
-    const pList = document.getElementById("project-list")
-
-    const firstProject = pList.firstElementChild;
-
-    const lastProject = pList.lastElementChild;
-
-    pList.insertBefore(lastProject, firstProject);
-}
+let animating = false;
 
 const nextP = () => {
-    console.log("next");
-    const pList = document.getElementById("project-list")
+  if (animating) return;
 
-    const firstProject = pList.firstElementChild;
+  animating = true;
 
-    let lastProject = pList.lastElementChild;
+  $(".project:nth-child(3)").removeClass("focussed");
+  $(".project:nth-child(4)").addClass("focussed");
 
-    pList.appendChild(firstProject, lastProject);
-}
+  $(".project")
+    .first()
+    .animate({ marginLeft: "-268px" }, function () {
+      $(".project").first().css("margin-left", "12px");
+      $(".list-container").append($(".project").first());
+
+      animating = false;
+    });
+};
+
+const prevP = () => {
+  if (animating) return;
+
+  animating = true;
+
+  $(".project:nth-child(3)").removeClass("focussed");
+  $(".project:nth-child(2)").addClass("focussed");
+
+  $(".project")
+    .first()
+    .animate({ marginLeft: "292px" }, function () {
+      $(".project").first().css("margin-left", "12px");
+      $(".list-container").prepend($(".project").last());
+
+      animating = false;
+    });
+};
+
+$(() => {
+  //$("#about").animate({ marginTop: "500px" }, 5000, "linear");
+});

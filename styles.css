@@ -10,7 +10,7 @@ body {
   align-items: center;
   margin: 0;
   user-select: none;
-  width: auto;
+  width: 100%;
 }
 
 .material-icons.md-48 {
@@ -104,10 +104,12 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 100%;
 }
 
 section {
   margin: 0 0 56px 0;
+  max-width: 100%;
 }
 
 .about-me {
@@ -135,15 +137,19 @@ section {
 }
 
 .project-list {
-  display: flex;
-  justify-content: center;
-  padding: 24px;
+  padding: 54px 0;
   margin: 0 24px;
   border-width: 0 1px;
   border-color: #ccc;
   border-style: solid;
   overflow: hidden;
-  max-width: 60vw;
+  max-width: 840px;
+}
+
+.project-list .list-container{
+  display: flex;
+  margin-left: -280px;
+  
 }
 
 .project {
@@ -153,18 +159,36 @@ section {
   min-width: 256px;
   height: 384px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 5px #ccc;
+  box-shadow: 0 0 8px 3px #ddd;
   margin: 0 12px;
+  background-color: white;
 
-  transition: all 0.2s ease-in;
+  transition: transform 0.4s;
+}
+
+.project.focussed {
+  transform: scale(1.1);
 }
 
 .project:hover {
+  cursor: pointer;
   transform: scale(1.05);
 }
 
+.project.focussed:hover {
+  transform: scale(1.15);
+  z-index: 20;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+  max-height: 300px;
+  overflow: hidden;
+}
+
 .project img {
-  min-width: 200px;
   height: 300px;
   margin: 24px 0 0 0;
 }
@@ -180,8 +204,13 @@ section {
   margin: 0 0 32px 0;
 }
 
-.skill p {
+.skill .title {
   margin: 0 0 8px 0;
+}
+
+.skill .desc {
+  padding: 8px 0 0 0;
+  display: none;
 }
 
 .progressbar {
@@ -198,19 +227,21 @@ section {
 
 .progressbar .one {
   width: 80%;
-  background-color: limegreen;
+  background: linear-gradient(90deg, rgb(50, 205, 50), rgb(128, 243, 128), rgb(50, 205, 50))
 }
 .progressbar .two {
   width: 70%;
-  background-color: rgb(138, 205, 50);
+  background: linear-gradient(90deg, rgb(138, 205, 50), rgb(190, 243, 122), rgb(138, 205, 50))
 }
 .progressbar .three {
   width: 65%;
   background-color: rgb(182, 205, 50);
+  background: linear-gradient(90deg, rgb(182, 205, 50), rgb(221, 238, 125), rgb(182, 205, 50))
 }
 .progressbar .four {
   width: 50%;
   background-color: rgb(205, 202, 50);
+  background: linear-gradient(90deg, rgb(205, 202, 50), rgb(236, 235, 127), rgb(205, 202, 50))
 }
 
 #contact {
@@ -273,6 +304,14 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: justify;
+  }
+
+  .project-container{
+    max-width: 100%;
+  }
+
+  .project-list{
+    margin: 0 auto;
   }
 
   form {

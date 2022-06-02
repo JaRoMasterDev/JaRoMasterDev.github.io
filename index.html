@@ -9,8 +9,10 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/sidenav.js"></script>
     <script src="./js/projects.js"></script>
+    <script src="./js/skills.js"></script>
     <title>JaRoMaster</title>
   </head>
   <body>
@@ -39,40 +41,52 @@
     <main>
       <section class="about-me">
         <p>
-          Hi, I'm a 15 years old developer with nearly two years of experience!
-          <br />
-          In the last two years I tried some different programming concepts and
-          languages and I'm currently focussing on web and app developement.
+          Hi! <br />I'm JaRoMaster, a 15 years old developer with nearly two
+          years of experience! In the last two years I tried some different
+          programming concepts and languages and I'm currently focussing on web
+          and app development.
         </p>
-        <img href="image" alt="An image of me" />
+        <img href="image" alt="I don't have g good image atm" />
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
         <div class="project-container">
           <span class="material-icons md-48 close icon-btn" onclick="prevP()"
-            >navigate_before</span
+          >navigate_before</span
           >
           <div class="project-list" id="project-list">
-            <div class="project">
-              <img href="protfolio" alt="" />
-              <p>My Portfolio 1</p>
-            </div>
-            <div class="project">
-              <img href="protfolio" alt="" />
-              <p>My Portfolio 2</p>
-            </div>
-            <div class="project">
-              <img href="protfolio" alt="" />
-              <p>My Portfolio 3</p>
-            </div>
-            <div class="project">
-              <img href="protfolio" alt="" />
-              <p>My Portfolio 4</p>
-            </div>
-            <div class="project">
-              <img href="protfolio" alt="" />
-              <p>My Portfolio 5</p>
+            <div class="list-container">
+              <div class="project">
+                <div class="image-container">
+                  <img src="" alt="Coming Soon..." />
+                </div>
+                <p>Coming Soon...</p>
+              </div>
+              <div class="project">
+                <div class="image-container">
+                  <img src="" alt="Still needs an image" />
+                </div>
+                <p>My Portfolio</p>
+              </div>
+              <div class="project focussed">
+                <div class="image-container">
+                  <img src="./images/kegelmanager.jpg" alt="Alt" />
+                </div>
+                <p>Kegelmanager</p>
+              </div>
+              <div class="project">
+                <div class="image-container">
+                  <img src="./images/pexels-leon-ardho-2468339.jpg" alt="Alt" />
+                </div>
+                <p>Workoutmanager</p>
+              </div>
+              <div class="project">
+                <div class="image-container">
+                  <img src="" alt="Coming Soon..." />
+                </div>
+                <p>Coming Soon...</p>
+              </div>
             </div>
           </div>
           <span class="material-icons md-48 close icon-btn" onclick="nextP()"
@@ -83,20 +97,53 @@
       <section id="skills">
         <h2>Skills</h2>
         <div class="skill">
-          <p>Javascript + React (native)</p>
+          <h3 class="title">Javascript + React (native)</p>
           <div class="progressbar"><div class="progress one"></div></div>
+          <p class="desc">
+            When I started looking into web development, I started learning
+            React because of its simplicity and I really fell in love with it.
+            During an internship at a local company I made my first experience
+            with React-Native. I got into it quickly because of my earlier
+            experience with React and the company offered me a small job as a
+            junior-developer next to school. <br />I'm still working at that
+            company while going to school and I'm learning many new things in
+            connection with React-Native and app-development in general
+          </p>
         </div>
         <div class="skill">
-          <p>Unity (C#)</p>
+          <p class="title">Unity (C#)</p>
           <div class="progressbar"><div class="progress two"></div></div>
+          <p class="desc">
+            I started programming because I saw some people on the internet
+            learning developing games and it seemed pretty easy. During Covid I
+            had a lot of free time and looked into 2D game development. I began
+            creating some simple games and learned the basics of programming
+            with Unity and C#. Later, when I was more experienced and knew a lot
+            more about different languages and programming in general I got into
+            game development again. I looked into 3D-development and the basics
+            of 3D-modelling before feeling the need to try something else and
+            learning web development.
+          </p>
         </div>
         <div class="skill">
-          <p>HTML5 + CSS3</p>
+          <p class="title">HTML5 + CSS3</p>
           <div class="progressbar"><div class="progress three"></div></div>
+          <p class="desc">
+            Long story short: <br />Before getting into React I learned the
+            basic HTML and CSS web development and got more and more experienced
+            because of it's wide use in React and while using it to build
+            smaller websites like this portfolio.
+          </p>
         </div>
         <div class="skill">
-          <p>Python</p>
+          <p class="title">Python</p>
           <div class="progressbar"><div class="progress four"></div></div>
+          <p class="desc">
+            After I started my programming journey with Unity and C# I wanted to
+            know what Python is. I heard a lot about it and it seemed easy to
+            learn.<br />I learned a lot of the basics about programming, machine
+            learning, networks and computers in general.
+          </p>
         </div>
       </section>
       <section id="contact">
